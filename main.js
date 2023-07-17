@@ -13,3 +13,12 @@ neonCursor({
     sleepTimeCoefX: 0.0025,
     sleepTimeCoefY: 0.0025,
 })
+
+
+
+ScrollReveal().reveal('.home');
+ScrollReveal().reveal('.about', { delay: 500 });
+ScrollReveal().reveal('.massage', { delay: 500 });
+ScrollReveal().reveal('.feedback', { delay: 500 });
+
+
