@@ -7,9 +7,25 @@
     <title>Third web page</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="main.js"></script>
+    <script src="https://kit.fontawesome.com/79295292b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <div class="bars">
+        <i class="fa-solid fa-xmark" onclick="menu()" id="xmark"></i>
+        <i class="fa-solid fa-bars icon" onclick="menu()" id="bars-icon"></i>
+    </div>
+
+    <div class="responsive" id="responsive" onclick="menu()">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About it</a></li>
+            <li><a href="#massage">A Message</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
+    </div>
+
     <header>
         <div class="logo">
             <div class="letters"><!--no se si es necesasrio colocarlo dentro de letters-->
@@ -25,6 +41,11 @@
             </ul>
         </div>
     </header>
+
+
+
+
+
 
     <!-- Apartado de HOME -->
     <div class="home" id="home">
@@ -125,5 +146,43 @@
 
 
 </body>
+
+
+<script>
+    // let menu = getElementById("responsive");
+
+    var activedMenu = false;
+
+    function menu() {
+        let menu = document.getElementById("responsive")
+        let bars = document.getElementById("bars-icon");
+        let xmark = document.getElementById("xmark");
+        if (activedMenu) {
+            activedMenu = !activedMenu;
+            // menu.style.translateX('101%');
+            menu.classList.remove("show");
+            // bars.classList.remove("hide-bars-icon")
+            // bars.style.display = "block";
+            bars.style.translate = "0";
+            // xmark.style.display = "none";
+            xmark.style.paddingLeft = "200px";
+
+        } else {
+            activedMenu = !activedMenu;
+            menu.classList.add("show");
+            // bars.classList.add("hide-bars-icon")
+            bars.style.translate = "60px";
+            // bars.style.display = "block";
+            xmark.style.padding = "30px";
+            // xmark.style.display = "none";
+
+        }
+    }
+
+
+
+</script>
+
+
 
 </html>
